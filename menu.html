@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Button Menu</title>
+    <link rel="stylesheet" href="menu_styles.css">
+</head>
+<body>
+  <div id="menu-container" class="menu-container">
+    <!-- Level 1 Menu -->
+    <div id="menu-1" class="menu level-1">
+      <div class="button" onclick="showMenu(2, this, 1)"><img src="sedus_black.png" alt="Sedus"/></div>
+      <div class="button" onclick="showMenu(3, this, 1)"><img src="bandalux_black.png" alt="Bandalux" /></div>
+      <div class="button" onclick="showMenu(4, this, 1)"><img src="quadrifoglio_black.png" alt="Quadrifoglio" /></div>
+    </div>
+
+    <!-- Level 2 menus -->
+    <div id="menu-2" class="menu level-2">
+      <div class="button" onclick="showMenu(5, this, 2)">A</div>
+      <div class="button" onclick="showMenu(6, this, 2)">B</div>
+      <div class="button" onclick="showMenu(7, this, 2)">C</div>
+    </div>
+    <div id="menu-3" class="menu level-2">
+      <div class="button" onclick="showMenu(8, this, 2)">D</div>
+      <div class="button" onclick="showMenu(9, this, 2)">E</div>
+      <div class="button" onclick="showMenu(10, this, 2)">F</div>
+    </div>
+    <div id="menu-4" class="menu level-2">
+      <div class="button" onclick="showMenu(11, this, 2)">X</div>
+      <div class="button" onclick="showMenu(12, this, 2)">Y</div>
+      <div class="button" onclick="showMenu(13, this, 2)">Z</div>
+    </div>
+    
+    <!-- Level 3 menus (initially hidden) -->
+    <div id="menu-5" class="menu level-3">
+      <div class="button">1A</div>
+      <div class="button">1B</div>
+      <div class="button">1C</div>
+    </div>
+    <div id="menu-6" class="menu level-3">
+      <div class="button">2A</div>
+      <div class="button">2B</div>
+      <div class="button">2C</div>
+    </div>
+    <div id="menu-7" class="menu level-3">
+      <div class="button">3A</div>
+      <div class="button">3B</div>
+      <div class="button">3C</div>
+    </div>
+    <div id="menu-8" class="menu level-3">
+      <div class="button">4A</div>
+      <div class="button">4B</div>
+      <div class="button">4C</div>
+    </div>
+    <div id="menu-9" class="menu level-3">
+      <div class="button">5A</div>
+      <div class="button">5B</div>
+      <div class="button">5C</div>
+    </div>
+    <div id="menu-10" class="menu level-3">
+      <div class="button">6A</div>
+      <div class="button">6B</div>
+      <div class="button">6C</div>
+    </div>
+    <div id="menu-11" class="menu level-3">
+      <div class="button">7A</div>
+      <div class="button">7B</div>
+      <div class="button">7C</div>
+    </div>
+    <div id="menu-12" class="menu level-3">
+      <div class="button">8A</div>
+      <div class="button">8B</div>
+      <div class="button">8C</div>
+    </div>
+    <div id="menu-13" class="menu level-3">
+      <div class="button">9A</div>
+      <div class="button">9B</div>
+      <div class="button">9C</div>
+    </div>
+  </div>
+  
+  <script src="menu_script.js"></script>
+</body>
+</html>

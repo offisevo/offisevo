@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="descrizione sito">
+    <title>OffiSevo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu_styles.css">
+</head>
+
+<body>
+    <header>
+        <header class="header">
+            <div class="logo-container">
+              <a href="#"><img src="assets/logo.svg" alt="OffiSevo" class="logo"></a>
+              <!-- <h1 class="site-title">Azienda</h1> -->
+            </div>
+            <nav class="nav">
+              <ul class="nav-list">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+          </header>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="assets/slide/Ambiente_06_Gen-2048x1088.jpg">
+                    <div class="slide-text">SPACES THAT EVOLVE</div>
+                </div>
+                <div class="slide">
+                    <img src="assets/slide/HHH.webp" alt="Product 2">
+                    <div class="slide-text">SPACES THAT EVOLVE</div>
+                </div>
+                <div class="slide">
+                    <img src="assets/slide/cadorago_9993_1920xx.jpg">
+                    <div class="slide-text">SPACES THAT EVOLVE</div>
+                </div>
+                <div class="slide">
+                    <img src="assets/slide/composizione-1var-1-scaled-1.jpg">
+                    <div class="slide-text">SPACES THAT EVOLVE</div>
+                </div>
+                <div class="slide">
+                    <img src="assets/slide/Italia_gallery-4-1.webp">
+                    <div class="slide-text">SPACES THAT EVOLVE</div>
+                </div>
+                <div class="slide">
+                    <img src="assets/slide/HHHHH.webp">
+                    <div class="slide-text">SPACES THAT EVOLVE</div>
+                </div>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            <!-- Indicators -->
+            <div class="indicators">
+                <span class="dot" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+                <span class="dot" onclick="goToSlide(3)"></span>
+                <span class="dot" onclick="goToSlide(4)"></span>
+                <span class="dot" onclick="goToSlide(5)"></span>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+      <section id="intestazione" class="intestazione">
+        <h1>Soluzioni innovative, confortevoli e durature per spazi di lavoro che si evolvono con te</h1>
+      </section>
+        <!-- <h1>I nostri prodotti</h1> -->
+
+      <section id="menu-container" class="menu-container">
+        <!-- Level 1 Menu -->
+        <div id="menu-1" class="menu level-1">
+          <div class="menu-button" onclick="showMenu(2, this, 1)" data-text="SEDUTE"><img src="assets/prodotti/sedute.svg" /></div>
+          <div class="menu-button" onclick="showMenu(3, this, 1)" data-text="TAVOLI"><img src="assets/prodotti/tavoli.svg" /></div>
+          <div class="menu-button" onclick="showMenu(4, this, 1)" data-text="SOLUZIONI"><img src="assets/prodotti/soluzioni.svg" /></div>
+        </div>
+    
+        <!-- Level 2 menus -->
+        <div id="menu-2" class="menu level-2">
+          <div class="menu-button" onclick="showPopup(1)" data-text=""><img src="assets/prodotti/sedute/operative.png" /></div>
+          <div class="menu-button" onclick="showPopup(2)" data-text=""><img src="assets/prodotti/sedute/direzionali.png" /></div>
+          <div class="menu-button" onclick="showPopup(3)" data-text=""><img src="assets/prodotti/sedute/conferenze.png" /></div>
+          <div class="menu-button" onclick="showPopup(4)" data-text=""><img src="assets/prodotti/sedute/lounge.png" /></div>
+          <div class="menu-button" onclick="showPopup(5)" data-text=""><img src="assets/prodotti/sedute/reception.png" /></div>
+          <div class="menu-button" onclick="showPopup(6)" data-text=""><img src="assets/prodotti/sedute/sgabelli.png" /></div>
+          <div class="menu-button" onclick="showPopup(7)" data-text=""><img src="assets/prodotti/sedute/divani_e_poltrone.png" /></div>
+        </div>
+        <div id="menu-3" class="menu level-2">
+          <div class="menu-button" onclick="showPopup(8)">D</div>
+          <div class="menu-button" onclick="showPopup(9)">E</div>
+          <div class="menu-button" onclick="showPopup(10)">F</div>
+          <div class="menu-button" onclick="showPopup(11)">as</div>
+          <div class="menu-button" onclick="showPopup(12)">as</div>
+        </div>
+        <div id="menu-4" class="menu level-2">
+          <div class="menu-button" onclick="showPopup(13)">X</div>
+          <div class="menu-button" onclick="showPopup(14)">Y</div>
+          <div class="menu-button" onclick="showPopup(15)">Z</div>
+        </div>
+        
+        <div class="popup-overlay" id="popup-overlay"></div>
+
+        <div id="popup1" class="popup">
+          <div class="popup-content">
+            <span class="close-popup-button">&times;</span>
+            <button class="scroll-arrow-button left-scroll-arrow-button">&#8592;</button>
+            <div class="images-container">
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/operative/op1.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/operative/op2.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/operative/op3.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/operative/op4.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/operative/op5.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/operative/op6.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/operative/op7.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/operative/op8.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/operative/op9.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/operative/op10.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/operative/op11.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/operative/op12.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+            </div>
+            <button class="scroll-arrow-button right-scroll-arrow-button">&#8594;</button>
+          </div>
+        </div>
+
+        <div id="popup2" class="popup">
+          <div class="popup-content">
+            <span class="close-popup-button">&times;</span>
+            <button class="scroll-arrow-button left-scroll-arrow-button">&#8592;</button>
+            <div class="images-container">
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/direzionali/dir1.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/direzionali/dir2.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/direzionali/dir3.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/direzionali/dir4.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/direzionali/dir5.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/direzionali/dir6.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+            </div>
+            <button class="scroll-arrow-button right-scroll-arrow-button">&#8594;</button>
+          </div>
+        </div>
+
+        <div id="popup3" class="popup">
+          <div class="popup-content">
+            <span class="close-popup-button">&times;</span>
+            <button class="scroll-arrow-button left-scroll-arrow-button">&#8592;</button>
+            <div class="images-container">
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/conferenze/conf1.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/conferenze/conf2.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/conferenze/conf3.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/conferenze/conf4.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/conferenze/conf5.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/conferenze/conf6.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/conferenze/conf7.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/conferenze/conf8.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/conferenze/conf9.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/conferenze/conf10.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/conferenze/conf11.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+            </div>
+            <button class="scroll-arrow-button right-scroll-arrow-button">&#8594;</button>
+          </div>
+        </div>
+
+        <div id="popup4" class="popup">
+          <div class="popup-content">
+            <span class="close-popup-button">&times;</span>
+            <button class="scroll-arrow-button left-scroll-arrow-button">&#8592;</button>
+            <div class="images-container">
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/lounge/lou1.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/lounge/lou2.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/lounge/lou3.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/lounge/lou4.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/lounge/lou5.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/lounge/lou6.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/lounge/lou7.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/lounge/lou8.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/lounge/lou9.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/lounge/lou10.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+            </div>
+            <button class="scroll-arrow-button right-scroll-arrow-button">&#8594;</button>
+          </div>
+        </div>
+
+        <div id="popup5" class="popup">
+          <div class="popup-content">
+            <span class="close-popup-button">&times;</span>
+            <button class="scroll-arrow-button left-scroll-arrow-button">&#8592;</button>
+            <div class="images-container">
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/reception/rec1.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/reception/rec2.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/reception/rec3.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/reception/rec4.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/reception/rec5.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/reception/rec6.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/reception/rec7.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/reception/rec8.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/reception/rec9.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/reception/rec10.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+            </div>
+            <button class="scroll-arrow-button right-scroll-arrow-button">&#8594;</button>
+          </div>
+        </div>
+        
+        <div id="popup6" class="popup">
+          <div class="popup-content">
+            <span class="close-popup-button">&times;</span>
+            <button class="scroll-arrow-button left-scroll-arrow-button">&#8592;</button>
+            <div class="images-container">
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/sgabelli/sga1.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/sgabelli/sga2.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/sgabelli/sga3.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/sgabelli/sga4.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+            </div>
+            <button class="scroll-arrow-button right-scroll-arrow-button">&#8594;</button>
+          </div>
+        </div>
+
+        <div id="popup7" class="popup">
+          <div class="popup-content">
+            <span class="close-popup-button">&times;</span>
+            <button class="scroll-arrow-button left-scroll-arrow-button">&#8592;</button>
+            <div class="images-container">
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/divani_poltrone\divpol1.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/divani_poltrone\divpol2.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/divani_poltrone\divpol3.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/divani_poltrone\divpol4.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/divani_poltrone\divpol5.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/divani_poltrone\divpol6.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/divani_poltrone\divpol7.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+              <div class="image-wrapper">
+                <img src="assets/prodotti/sedute/divani_poltrone\divpol8.jpg" alt="Image 1">
+                <div class="image-description">Description 1</div>
+              </div>
+            </div>
+            <button class="scroll-arrow-button right-scroll-arrow-button">&#8594;</button>
+          </div>
+        </div>
+
+      </section>
+        
+
+      <section id="partners" class="partners">
+        <div><h1>I nostri partner</h1></div>
+        <div class="partner-logos-container">
+          <img src="assets/partner_logos/grey/bandalux_grey.png" alt="Bandalux" class="partner-logo">
+          <img src="assets/partner_logos/grey/caimi_grey.png" alt="Caimi" class="partner-logo">
+          <img src="assets/partner_logos/grey/dieffebi_grey.png" alt="Dieffebi" class="partner-logo">
+          <img src="assets/partner_logos/grey/quadrifoglio_grey.png" alt="Quadrifoglio" class="partner-logo">
+          <img src="assets/partner_logos/grey/sedus_grey.png" alt="Sedus" class="partner-logo">
+          <img src="assets/partner_logos/grey/vaghi_grey.png" alt="Vaghi" class="partner-logo">
+          <img src="assets/partner_logos/grey/waldmann_grey.png" alt="Waldmann" class="partner-logo">
+          <!-- <img src="logo8.png" alt="Partner 8" class="partner-logo">
+          <img src="logo9.png" alt="Partner 9" class="partner-logo">
+          <img src="logo10.png" alt="Partner 10" class="partner-logo">
+          <img src="logo11.png" alt="Partner 11" class="partner-logo">
+          <img src="logo12.png" alt="Partner 12" class="partner-logo">
+          <img src="logo13.png" alt="Partner 13" class="partner-logo">
+          <img src="logo14.png" alt="Partner 14" class="partner-logo">
+          <img src="logo15.png" alt="Partner 15" class="partner-logo"> -->
+        </div>
+      </section>
+    </main>
+
+    <!-- <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer> -->
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Learn more about our company and mission.</p>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Mappa del sito</h3>
+            <ul>
+              <li><a href="#">Prodotti X</a></li>
+              <li><a href="#">Prodotti Y</a></li>
+              <li><a href="#">Altro</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Follow Us</h3>
+            <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
+    <script src="menu_script.js"></script>
+</body>
+
+</html>

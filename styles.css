@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap&text=→←');
+
+  /* Global Styles */
+  html {
+    font-size: 14px; /* Set for rem */
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6; /* Improve readability */
+    color: #333;      /* Neutral dark gray text */
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0 0.5rem 0;
+    background-color: #38c0b5; /* Dark background */
+    color: black;
+    position: sticky; /* Sticky header */
+    top: 0; /* Sticks to the top */
+    z-index: 900; /* Ensure it stays above other content */
+  }
+
+  section {
+    margin-bottom: 18rem; /* Adjust as needed */
+  }
+
+  section:last-child {
+    margin-bottom: 6rem;
+  }
+  
+  /* Logo container */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: left;
+    padding-left: 1rem;
+  }
+  
+  /* Logo image */
+  .logo {
+    display: block;
+    width: 11rem; /* Adjust the size as needed */
+    /* margin-right: 2rem; Space between logo and title */
+  }
+  
+  /* Site title */
+  /* .site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(226, 90, 90);
+  } */
+  
+  /* Navigation styles */
+  .nav {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-list li {
+    /* margin-left: 20px; Space between links */
+    padding: 0 1rem 0 1rem;
+    /* border-right: 0.5px solid #333; */
+    position: relative;
+  }
+  
+  .nav-list li:last-child {
+    border-right: none;
+  }
+
+  .nav-list li::after {
+    content: ""; /* Create an empty pseudo-element */
+    position: absolute;
+    top: 10px; /* Start the border 10px from the top of the item */
+    bottom: 10px; /* End the border 10px from the bottom of the item */
+    right: 0; /* Position it at the right edge of the list item */
+    width: 1px; /* Set the width of the border */
+    background-color: #333; /* Set the border color */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 1)); /* Fading effect closer to edges */
+  }
+
+  .nav-list li:last-child::after {
+    content: none; /* No border for the last item */
+  }
+
+  .nav-list a {
+    text-decoration: none;
+    color: white; /* Match the header text color */
+    transition: color 0.3s;
+  }
+  
+  .nav-list a:hover {
+    color: #e3b23d; /* Highlight color on hover */
+  }
+
+  .menu-toggle {
+    display: none; /* Hidden by default, visible only on mobile */
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+    right: 0.3rem;
+  }
+  
+  .menu-toggle:hover {
+    color: #e3b23d;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 2.5rem; /* Adjust font size for emphasis */
+    color: #444;      /* Softer black */
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  /* Slider Container */
+  .slider {
+    position: relative;
+    overflow: hidden; /* Hide overflowing slides */
+    width: 100%;
+    height: 45rem; /* Adjust height as needed */
+    margin-bottom: 9rem;
+  }
+  /* Slides Wrapper */
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth slide animation */
+    width: 100%; /* Set to 100% * number of slides */
+  }
+  /* Individual Slide */
+  .slide {
+    flex: 0 0 100%; /* Each slide takes 100% of the viewport width */
+    position: relative; /* Establish a positioning context for text */
+    overflow: hidden;   /* Ensure content stays within the slide boundaries */
+    height: 45rem; /* Adjust height as needed */
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    display: block;     /* Remove inline gaps between images */
+    object-fit: cover /* Maintain aspect ratio, crop excess */
+  }
+  .slide-text {
+    position: absolute;  /* Position text over the image */
+    bottom: 2em;        /* Place text near the bottom */
+    text-align: center;
+    width: 100%;
+    color: #fff;         /* White text for contrast */
+    font-size: 5rem;   /* Adjust font size for visibility */
+    /* background-color: rgba(0, 0, 0, 0.5);  Semi-transparent background */
+    text-shadow: 0 0 10px black;
+  }
+  /* Indicators (Dots) */
+  .indicators {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .dot.active {
+    background: white;
+  }
+  
+  /* Buttons */
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+
+
+  /* Partner logos */
+  .partner-logos-container {
+    text-align: center;
+    width: 80%; /* Set width to 80% */
+    margin: 2rem auto; /* Center the section horizontally */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 3rem; /* Space between logos */
+  }
+  .partner-logo {
+      max-width: 100%;
+      width: 6rem; /* Adjust the logo size */
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #333;   /* Dark background */
+    color: #fff;             /* White text */
+    padding: 40px 20px;      /* Space around the footer */
+  }
+  .footer-content {
+    display: flex;           /* Use flexbox for columns */
+    justify-content: space-between; /* Space out columns */
+    flex-wrap: wrap;         /* Wrap columns on smaller screens */
+    max-width: 1200px;       /* Constrain the width of the footer */
+    margin: 0 auto;          /* Center the footer content */
+  }
+  .footer-column {
+    flex: 1;                 /* Each column takes equal width */
+    min-width: 200px;        /* Ensure columns don’t shrink too small */
+    margin: 10px;            /* Add spacing between columns */
+  }
+  .footer-column h3 {
+    font-size: 1.2rem;       /* Larger font for headings */
+    margin-bottom: 10px;     /* Add space below headings */
+  }
+  .footer-column ul {
+    list-style: none;        /* Remove list styling */
+    padding: 0;
+  }
+  .footer-column ul li {
+    margin-bottom: 8px;      /* Add space between list items */
+  }
+  .footer-column ul li a {
+    color: #fff;             /* White text for links */
+    text-decoration: none;   /* Remove underline */
+    transition: color 0.3s;  /* Smooth transition for hover */
+  }
+  .footer-column ul li a:hover {
+    color: #e3b23d;          /* Gold color on hover */
+  }
+
+
+
+
+  @media (max-width: 768px) {
+    .product {
+      flex-direction: column; /* Stack description and image */
+      text-align: center;     /* Center-align text for better appearance */
+    }
+    .products {
+      flex-direction: column; /* Stack description and image */
+    }
+    .image img {
+      max-width: 100%;        /* Allow images to scale on smaller screens */
+      margin-top: 10px;       /* Add space between text and image */
+    }
+    .footer-links {
+      flex-direction: column; /* Stack links vertically */
+      gap: 10px;              /* Reduce spacing */
+    }
+    .footer-content {
+      flex-direction: column; /* Stack columns vertically */
+      align-items: center;    /* Center-align columns */
+    }
+    .footer-column {
+      text-align: center;     /* Center the text */
+    }
+
+    /* Show the hamburger menu button */
+    .menu-toggle {
+      display: block;
+    }
+    .nav-list {
+      display: none;
+      flex-direction: column; /* Stack items vertically */
+      width: 30%;
+      background-color: white;
+      padding: 0;
+      position: absolute;
+      top: 4.5rem; /* Below the header */
+      right: 0;
+    }
+    
+    /* Show the navigation links when the menu is open */
+    .nav-list.active {
+      display: flex;
+      box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Controlla il bordo */
+    .nav-list li {
+      padding: 0;
+      margin: 0 0.5rem 0 0.5rem;
+      border-bottom: 1px solid #38c0b5;
+    }
+    
+    .nav-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .nav-list li::after {
+      display: none;
+    }
+    
+    /* .nav-list li:hover {
+      background: #f0ecec;
+    } */
+    
+    .nav-list a {
+      display: block; /* Make the anchor tag a block element */
+      color: #38c0b5;
+      font-size: large;
+      padding: 0.8rem 1rem; /* Adjusted padding for consistency */
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: right; /* Align text to the right */
+      box-sizing: border-box; /* Ensure padding is included in the element's total size */
+    }
+
+    h1 {
+      font-size: 2rem; /* Adjust font size for emphasis */
+      width: 90%;
+    }
+
+    .slider {
+      height: auto; /* Adjust height for mobile */
+    }
+    
+    .slide {
+      height: auto; /* Adjust height to maintain aspect ratio */
+    }
+
+    .slide-text {
+      font-size: 2rem;   /* Adjust font size for visibility */
+    }
+
+    section {
+      margin-bottom: 9rem;
+    }
+
+    .partner-logo {
+      max-width: 100%;
+      width: 4rem; /* Adjust the logo size */
+    }
+  }

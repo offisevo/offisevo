@@ -1,0 +1,3 @@
+# ignore ALL .log files
+*.py
+sedute_old.html
