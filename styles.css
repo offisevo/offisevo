@@ -358,6 +358,10 @@
       font-size: 2rem;   /* Adjust font size for visibility */
     }
 
+    .prev, .next {
+      display: none;
+    }
+
     section {
       margin-bottom: 9rem;
     }
