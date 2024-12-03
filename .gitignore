@@ -1,3 +1,5 @@
 # ignore ALL .log files
 *.py
 sedute_old.html
+*template*
+desktop.ini
