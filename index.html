@@ -73,21 +73,21 @@
         <h1>Soluzioni innovative, confortevoli e durature per spazi di lavoro che si evolvono con te</h1>
       </section>
       
-      <section id="first-block" class="n-block">
-        <!-- <img src="assets/prova.jpg" alt="Sedus"> -->
+      <section id="initial-banner" class="initial-banner">
+        <img src="assets/tavola.webp">
         <!-- <div class="caption"><b>DESCRIZIONE INTRODUZIONE SEDUS</b><br/>Rapporto con azienda Sedus, partner da più di 15 anni. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</div> -->
       </section>
 
       <section id="menu-container" class="menu-container">
         <!-- Level 1 Menu -->
         <div id="menu-1" class="menu level-1">
-          <div class="menu-button" onclick="showMenu(2, this, 1)" data-text="SEDUTE"><img src="assets/prodotti/sedute.svg" /></div>
-          <div class="menu-button" onclick="showMenu(3, this, 1)" data-text="TAVOLI"><img src="assets/prodotti/tavoli.svg" /></div>
-          <div class="menu-button" onclick="showMenu(4, this, 1)" data-text="SOLUZIONI"><img src="assets/prodotti/soluzioni.svg" /></div>
+          <div class="menu-button" onclick="showMenu(2, this, 1)" data-text_="SEDUTE"><img src="assets/prodotti/sedute.svg" /></div>
+          <div class="menu-button" onclick="showMenu(3, this, 1)" data-text_="ARREDI"><img src="assets/prodotti/arredi.svg" /></div>
+          <div class="menu-button" onclick="showMenu(4, this, 1)" data-text_="RIUNIONI"><img src="assets/prodotti/riunioni.svg" /></div>
         </div>
     
         <!-- Level 2 menus -->
-        <div id="menu-2" class="menu level-2">
+        <div id="menu-2" class="menu level-2" alt="Sedute">
           <div class="menu-button" onclick="showPopup(1)" data-text=""><img src="assets/prodotti/sedute/operative.png" /></div>
           <div class="menu-button" onclick="showPopup(2)" data-text=""><img src="assets/prodotti/sedute/direzionali.png" /></div>
           <div class="menu-button" onclick="showPopup(3)" data-text=""><img src="assets/prodotti/sedute/conferenze.png" /></div>
@@ -96,16 +96,30 @@
           <div class="menu-button" onclick="showPopup(6)" data-text=""><img src="assets/prodotti/sedute/sgabelli.png" /></div>
           <div class="menu-button" onclick="showPopup(7)" data-text=""><img src="assets/prodotti/sedute/divani_e_poltrone.png" /></div>
         </div>
-        <div id="menu-3" class="menu level-2">
-          <div class="menu-button" onclick="showPopup(8)" data-text=""><img src="assets/prodotti/tavoli/singoli.svg" /></div>
-          <div class="menu-button" onclick="showPopup(9)" data-text=""><img src="assets/prodotti/tavoli/team.svg" /></div>
-          <div class="menu-button" onclick="showPopup(10)" data-text=""><img src="assets/prodotti/tavoli/riu_semi_conf.svg" /></div>
-          <div class="menu-button" onclick="showPopup(11)" data-text=""><img src="assets/prodotti/tavoli/bistro_lounge.svg" /></div>
+
+        <div id="menu-3" class="menu level-2" alt="Arredi">
+          <div class="menu-button" onclick="showMenu(5, this, 2)" data-text="Tavoli"><img src="assets/prodottidummy" /></div>
+          <div class="menu-button" onclick="showMenu(6, this, 2)" data-text="Fonoassorbenza"><img src="assets/prodottidummy" /></div>
+          <div class="menu-button" onclick="showMenu(7, this, 2)" data-text="Verde"><img src="assets/prodottidummy" /></div>
+          <div class="menu-button" onclick="showMenu(8, this, 2)" data-text="Illuminazione"><img src="assets/prodottidummy" /></div>
+          <div class="menu-button" onclick="showMenu(9, this, 2)" data-text="Contenitori"><img src="assets/prodottidummy" /></div>
+          <div class="menu-button" onclick="showMenu(10, this, 2)" data-text="Tappeti"><img src="assets/prodottidummy" /></div>
+          <div class="menu-button" onclick="showMenu(11, this, 2)" data-text="Scaffalatura"><img src="assets/prodottidummy" /></div>
         </div>
-        <div id="menu-4" class="menu level-2">
-          <div class="menu-button" onclick="showPopup(13)">X</div>
-          <div class="menu-button" onclick="showPopup(14)">Y</div>
-          <div class="menu-button" onclick="showPopup(15)">Z</div>
+
+        <div id="menu-4" class="menu level-2" alt="Riunioni">
+          <div class="menu-button" onclick="showMenu(12, this, 2)" data-text="Divani"><img src="assets/prodottidummy" /></div>
+          <div class="menu-button" onclick="showMenu(13, this, 2)" data-text="Vetrate"><img src="assets/prodottidummy" /></div>
+          <div class="menu-button" onclick="showMenu(14, this, 2)" data-text="Tavoli riunioni"><img src="assets/prodottidummy" /></div>
+          <div class="menu-button" onclick="showMenu(15, this, 2)" data-text="Meeting box"><img src="assets/prodottidummy" /></div>
+        </div>
+
+        <!-- Level 3 menus -->
+        <div id="menu-5" class="menu level-3" alt="Tavoli">
+          <div class="menu-button" onclick="showPopup(8)" data-text=""><img src="assets/prodotti/arredi/tavoli/singoli.svg" /></div>
+          <div class="menu-button" onclick="showPopup(9)" data-text=""><img src="assets/prodotti/arredi/tavoli/team.svg" /></div>
+          <div class="menu-button" onclick="showPopup(10)" data-text=""><img src="assets/prodotti/arredi/tavoli/riu_semi_conf.svg" /></div>
+          <div class="menu-button" onclick="showPopup(11)" data-text=""><img src="assets/prodotti/arredi/tavoli/bistro_lounge.svg" /></div>
         </div>
         
         <div class="popup-overlay" id="popup-overlay"></div>
@@ -117,73 +131,73 @@
             <div class="images-container">
               <a href="/prodotti/sekit.html" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/operative/op1.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/operative/op1.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/operative/op2.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/operative/op2.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/operative/op3.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/operative/op3.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/operative/op4.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/operative/op4.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/operative/op5.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/operative/op5.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/operative/op6.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/operative/op6.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/operative/op7.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/operative/op7.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/operative/op8.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/operative/op8.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/operative/op9.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/operative/op9.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/operative/op10.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/operative/op10.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/operative/op11.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/operative/op11.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/operative/op12.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/operative/op12.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
@@ -199,37 +213,37 @@
             <div class="images-container">
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/direzionali/dir1.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/direzionali/dir1.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/direzionali/dir2.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/direzionali/dir2.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/direzionali/dir3.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/direzionali/dir3.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/direzionali/dir4.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/direzionali/dir4.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/direzionali/dir5.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/direzionali/dir5.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/direzionali/dir6.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/direzionali/dir6.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
@@ -245,67 +259,67 @@
             <div class="images-container">
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/conferenze/conf1.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/conferenze/conf1.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/conferenze/conf2.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/conferenze/conf2.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/conferenze/conf3.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/conferenze/conf3.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/conferenze/conf4.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/conferenze/conf4.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/conferenze/conf5.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/conferenze/conf5.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/conferenze/conf6.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/conferenze/conf6.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/conferenze/conf7.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/conferenze/conf7.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/conferenze/conf8.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/conferenze/conf8.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/conferenze/conf9.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/conferenze/conf9.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/conferenze/conf10.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/conferenze/conf10.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/conferenze/conf11.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/conferenze/conf11.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
@@ -321,61 +335,61 @@
             <div class="images-container">
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/lounge/lou1.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/lounge/lou1.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/lounge/lou2.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/lounge/lou2.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/lounge/lou3.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/lounge/lou3.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/lounge/lou4.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/lounge/lou4.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/lounge/lou5.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/lounge/lou5.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/lounge/lou6.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/lounge/lou6.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/lounge/lou7.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/lounge/lou7.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/lounge/lou8.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/lounge/lou8.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/lounge/lou9.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/lounge/lou9.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/lounge/lou10.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/lounge/lou10.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
@@ -391,61 +405,61 @@
             <div class="images-container">
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/reception/rec1.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/reception/rec1.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/reception/rec2.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/reception/rec2.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/reception/rec3.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/reception/rec3.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/reception/rec4.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/reception/rec4.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/reception/rec5.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/reception/rec5.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/reception/rec6.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/reception/rec6.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/reception/rec7.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/reception/rec7.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/reception/rec8.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/reception/rec8.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/reception/rec9.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/reception/rec9.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/reception/rec10.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/reception/rec10.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
@@ -461,25 +475,25 @@
             <div class="images-container">
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/sgabelli/sga1.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/sgabelli/sga1.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/sgabelli/sga2.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/sgabelli/sga2.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/sgabelli/sga3.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/sgabelli/sga3.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/sgabelli/sga4.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/sgabelli/sga4.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
@@ -495,49 +509,49 @@
             <div class="images-container">
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/divani_poltrone/divpol1.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/divani_poltrone/divpol1.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/divani_poltrone/divpol2.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/divani_poltrone/divpol2.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/divani_poltrone/divpol3.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/divani_poltrone/divpol3.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/divani_poltrone/divpol4.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/divani_poltrone/divpol4.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/divani_poltrone/divpol5.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/divani_poltrone/divpol5.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/divani_poltrone/divpol6.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/divani_poltrone/divpol6.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/divani_poltrone/divpol7.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/divani_poltrone/divpol7.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/sedute/divani_poltrone/divpol8.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/sedute/divani_poltrone/divpol8.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
@@ -554,67 +568,67 @@
             <div class="images-container">
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/singoli/sing1.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/singoli/sing1.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/singoli/sing2.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/singoli/sing2.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/singoli/sing3.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/singoli/sing3.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/singoli/sing4.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/singoli/sing4.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/singoli/sing5.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/singoli/sing5.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/singoli/sing6.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/singoli/sing6.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/singoli/sing7.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/singoli/sing7.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/singoli/sing8.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/singoli/sing8.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/singoli/sing9.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/singoli/sing9.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/singoli/sing10.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/singoli/sing10.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/singoli/sing11.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/singoli/sing11.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
@@ -630,55 +644,55 @@
             <div class="images-container">
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/team/team1.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/team/team1.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/team/team2.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/team/team2.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/team/team3.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/team/team3.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/team/team4.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/team/team4.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/team/team5.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/team/team5.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/team/team6.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/team/team6.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/team/team7.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/team/team7.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/team/team8.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/team/team8.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/team/team9.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/team/team9.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
@@ -694,73 +708,73 @@
             <div class="images-container">
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/riu_semi_conf/riu1.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/riu_semi_conf/riu1.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/riu_semi_conf/riu2.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/riu_semi_conf/riu2.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/riu_semi_conf/riu3.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/riu_semi_conf/riu3.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/riu_semi_conf/riu4.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/riu_semi_conf/riu4.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/riu_semi_conf/riu5.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/riu_semi_conf/riu5.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/riu_semi_conf/riu6.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/riu_semi_conf/riu6.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/riu_semi_conf/riu7.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/riu_semi_conf/riu7.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/riu_semi_conf/riu8.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/riu_semi_conf/riu8.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/riu_semi_conf/riu9.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/riu_semi_conf/riu9.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/riu_semi_conf/riu10.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/riu_semi_conf/riu10.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/riu_semi_conf/riu11.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/riu_semi_conf/riu11.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/riu_semi_conf/riu12.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/riu_semi_conf/riu12.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
@@ -776,43 +790,43 @@
             <div class="images-container">
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/bistro_lounge/bis1.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/bistro_lounge/bis1.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/bistro_lounge/bis2.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/bistro_lounge/bis2.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/bistro_lounge/bis3.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/bistro_lounge/bis3.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/bistro_lounge/bis4.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/bistro_lounge/bis4.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/bistro_lounge/bis5.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/bistro_lounge/bis5.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/bistro_lounge/bis6.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/bistro_lounge/bis6.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>
               <a href="https://www.google.com" target="_blank">
                 <div class="image-wrapper">
-                  <img data-src="assets/prodotti/tavoli/bistro_lounge/bis7.jpg" class="lazy-load" alt="Image 1">
+                  <img loading="lazy" data-src="assets/prodotti/arredi/tavoli/bistro_lounge/bis7.jpg" class="lazy-load" alt="Image 1">
                   <div class="image-description">Description 1</div>
                 </div>
               </a>

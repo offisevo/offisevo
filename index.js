@@ -225,18 +225,33 @@ document.addEventListener("DOMContentLoaded", function() {
   const leftArrows = document.querySelectorAll('.left-scroll-arrow-button');
   const rightArrows = document.querySelectorAll('.right-scroll-arrow-button');
   // Function to close popup
+  function closePopup(popup) {
+    if (popup) {
+        popup.classList.remove('show');
+        popup.classList.add('hide');
+        overlay.classList.remove('show');
+        overlay.classList.add('hide');
+        setTimeout(() => {
+            overlay.style.display = "none"; // Hide the overlay
+            enableVerticalScroll(); // Enable vertical scroll after closing the popup
+        }, 500); // Match the closing transition duration
+    }
+  }
+
+  // Function to close popup when clicking the close button
   closePopupButtons.forEach(button => {
       button.addEventListener("click", () => {
           const popup = button.closest(".popup");
-          popup.classList.remove('show');
-          popup.classList.add('hide');
-          overlay.classList.remove('show');
-          overlay.classList.add('hide');
-          setTimeout(() => {
-              overlay.style.display = "none"; // Hide the overlay
-              enableVerticalScroll(); // Enable vertical scroll after closing the popup
-          }, 500); // Match the closing transition duration
+          closePopup(popup);
       });
+  });
+
+  // Function to close popup when pressing the Esc key
+  document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' || event.key === 'Esc') {
+          const popup = document.querySelector('.popup.show');
+          closePopup(popup);
+      }
   });
   // Handle left arrow click
   leftArrows.forEach(arrow => {
