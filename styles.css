@@ -14,6 +14,11 @@ body {
   padding: 0;
 }
 
+::selection {
+  background: #ffcc00; /* Background color for the selection */
+  color: #000; /* Text color for the selection */
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -27,11 +32,11 @@ body {
 }
 
 section {
-  margin-bottom: 18rem; /* Adjust as needed */
+  margin-bottom: 6rem; /* Adjust as needed */
 }
 
 section:last-child {
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 
 /* Logo container */
@@ -188,8 +193,6 @@ button {
 .footer-column ul li a:hover {
   color: #e3b23d; /* Gold color on hover */
 }
-
-
 
 
 @media (max-width: 768px) {

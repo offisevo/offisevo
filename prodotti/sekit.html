@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="descrizione sito">
+    <title>Se:kit</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="product_styles.css">
+</head>
+
+<body>
+    <header>
+        <header class="header">
+            <div class="logo-container">
+              <a href="#"><img src="/assets/logo.svg" alt="OffiSevo" class="logo"></a>
+              <!-- <h1 class="site-title">Azienda</h1> -->
+            </div>
+            <nav class="nav">
+              <ul class="nav-list">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+          </header>
+    </header>
+
+
+    <main>
+      <section id="banner" class="banner">
+        <img src="https://www.sedus.com/fileadmin/_processed_/2/8/csm_sedus_banner_sekit_2023_4a1652a9c8.jpg">
+      </section>
+      <section id="prod-wrapper" class="prod-wrapper">
+        <img src="https://www.sedus.com/fileadmin/user_upload/Products/Chairs/Vorschaubild/se-kit/image_p_g.jpg">
+        <div>
+          <div id="prod-title" class="prod-title">se:kit</div>
+          <div id="prod-subtitle" class="prod-subtitle">Seduta operativa con sistema modulare</div>
+          <div id="prod-desc" class="prod-desc">Indipendentemente da dove o come si lavori, gli universi lavorativi, le mansioni da svolgere e le esigenze dei collaboratori sono sempre diversi; lo stesso vale per i requisiti delle attrezzature in dotazione e per le aspettative dell'utente nei confronti della ”seduta perfetta”. Quanto sarebbe bello e pratico, dunque, disporre di una seduta in grado di esaudire i desideri di tutti? La nuova se:kit si basa su un approccio particolare, il sistema modulare, e si concentra sulla praticità. È l’utente a decidere come deve essere assemblata e con quali componenti, in totale libertà all'insegna del motto ”less is more”, ma anche ”more is more”. L'elemento che non manca mai: una seduta ergonomica dal massimo comfort, ma senza compromessi in fatto di design ed estetica.</div>
+        </div>
+      </section>
+      <section id="product-slider-section" class="product-slider-section">
+        <div class="product-slider">
+          <div class="product-slides">
+              <div class="product-slide">
+                  <img src="https://www.sedus.com/fileadmin/_processed_/1/6/csm_sedus_sekit_impressionen1_6eee347151.jpg">
+              </div>
+              <div class="product-slide">
+                  <img src="https://www.sedus.com/fileadmin/_processed_/9/f/csm_sedus_sekit_impressionen2_618ab8304f.jpg">
+              </div>
+              <div class="product-slide">
+                  <img src="https://www.sedus.com/fileadmin/_processed_/4/9/csm_sedus_sekit_impressionen3_9092af9363.jpg">
+              </div>
+              <div class="product-slide">
+                  <img src="https://www.sedus.com/fileadmin/_processed_/b/6/csm_sedus_sekit_impressionen4_266061f845.jpg">
+              </div>
+              <div class="product-slide">
+                  <img src="https://www.sedus.com/fileadmin/_processed_/c/1/csm_sedus_sekit_impressionen5_66b0384733.jpg">
+              </div>
+              <div class="product-slide">
+                  <img src="https://www.sedus.com/fileadmin/_processed_/c/5/csm_sedus_sekit_impressionen6_dafb56b806.jpg">
+              </div>
+              <div class="product-slide">
+                  <img src="https://www.sedus.com/fileadmin/_processed_/9/4/csm_sedus_sekit_impressionen7_79cdbfa943.jpg">
+              </div>
+              <div class="product-slide">
+                  <img src="https://www.sedus.com/fileadmin/_processed_/7/7/csm_sedus_sekit_impressionen8_fa13012097.jpg">
+              </div>
+          </div>
+        <button class="product-prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="product-next" onclick="changeSlide(1)">&#10095;</button>
+            <!-- Indicators -->
+            <div class="product-indicators">
+                <span class="product-dot" onclick="goToSlide(0)"></span>
+                <span class="product-dot" onclick="goToSlide(1)"></span>
+                <span class="product-dot" onclick="goToSlide(2)"></span>
+                <span class="product-dot" onclick="goToSlide(3)"></span>
+                <span class="product-dot" onclick="goToSlide(4)"></span>
+                <span class="product-dot" onclick="goToSlide(5)"></span>
+                <span class="product-dot" onclick="goToSlide(6)"></span>
+                <span class="product-dot" onclick="goToSlide(7)"></span>
+            </div>
+        </div>
+      </section>
+
+      <section id="opzioni-section">
+        <div id="opzioni-title" class="section-title">Opzioni</div>
+        <div class="table-container">
+          <table class="contenttable">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">di serie</th>
+              <th scope="col">su richiesta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Imbottiture</td>
+              <td>Sedile e schienale imbottiti</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Colore modello / Parti in plastica</td>
+              <td>nero</td>
+              <td>grigio chiaro</td>
+            </tr>
+            <tr>
+              <td>Sostegno lombare</td>
+              <td>Senza sostegno lombare</td>
+              <td>Sostegno lombare regolabile in altezza con regolazione in profondità adattabile</td>
+            </tr>
+            <tr>
+              <td>Braccioli</td>
+              <td>Braccioli 2-D con poggiabraccia in poliammide</td>
+              <td>
+                <p>- Braccioli in poliammide regolabili in altezza <br /> - 2-D braccioli di design con poggiabraccia in PUR <br /> - Braccioli 3-D con poggiabraccia in PUR, regolabili in larghezza senza attrezzi <br /> - Braccioli 4-D con poggiabraccia softtouch <br /> - Senza braccioli </p>
+              </td>
+            </tr>
+            <tr>
+              <td>Sedile</td>
+              <td>Sedile standard</td>
+              <td>- Sedile scorrevole (campo di regolazione 60 mm) <br /> - Sedile scorrevole (campo di regolazione 70 mm) <br /> - Sedile comfort <br /> - Sedile scorrevole comfort (campo di regolazione 60 mm) <br /> - Sedile scorrevole comfort (campo di regolazione 70 mm) </td>
+            </tr>
+            <tr>
+              <td>Meccanismo</td>
+              <td>Meccanismo Similar con regolazione automatica del peso</td>
+              <td>- Meccanismo Kinetic-Swing <br /> - Meccanismo Similar con regolazione individuale del peso <br /> - Meccanismo Similar con regolazione individuale del peso e inclinazione del sedile </td>
+            </tr>
+            <tr>
+              <td>Elevazione sedile</td>
+              <td>Cartuccia a gas</td>
+              <td>- Sedo-Lift III <br /> - Cartuccia a gas per versione counter con anello poggiapiedi </td>
+            </tr>
+            <tr>
+              <td>Basamento</td>
+              <td>Base in plastico a 5 razze nero</td>
+              <td>- Base in plastico a 5 razze grigio chiaro <br /> - Base in alluminio a 5 razze nero <br /> - Base in alluminio a 5 razze grigio chiaro <br /> - Base in alluminio a 5 razze lucidato </td>
+            </tr>
+            <tr>
+              <td>Rotelle</td>
+              <td>Rotelle dure per pavimento morbido</td>
+              <td>- Rotelle morbide per pavimento duro <br /> - Rotelle autofrenanti </td>
+            </tr>
+            <tr>
+              <td>Versione ignifuga</td>
+              <td>Versione senza ignifuga</td>
+              <td>Versione ignifuga – l’imbottitura è possibile con tessuti di rivestimento Step e la membrana color antracite</td>
+            </tr>
+            <tr>
+              <td>Accessori</td>
+              <td>Non accessori</td>
+              <td>- Gruccia per abiti <br /> - Poggiatesta regolabile in altezza e girevole – in similpelle nera o grigio chiaro <br /> - Set di poggiatesta/gruccia per abiti </td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="specifiche-section">
+        <div id="specifiche-title" class="section-title">Specifiche tecniche</div>
+        <div class="table-container">
+          <table class="contenttable">
+          <thead>
+            <tr>
+              <th>Dimensiones</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sedia girevole</td>
+              <td>
+                <img height="440" loading="lazy" src="https://www.sedus.com/fileadmin/_processed_/3/5/csm_sn-121_2DAL_Front_M_PL_3b515c0161.jpg" width="300" />
+                <img height="491" loading="lazy" src="https://www.sedus.com/fileadmin/_processed_/7/5/csm_sn-121_2DAL_Seite_M_PL_8ec96fbc93.jpg" width="299" />
+                <img height="440" loading="lazy" src="https://www.sedus.com/fileadmin/_processed_/c/0/csm_sn-123_NaSt_4DAL_Front_M_PL_263e7a2659.jpg" width="300" />
+                <img height="491" loading="lazy" src="https://www.sedus.com/fileadmin/_processed_/f/8/csm_sn-123_NaSt_4DAL_Seite_M_PL_7fd9053cb1.jpg" width="299" />
+                <img height="428" loading="lazy" src="https://www.sedus.com/fileadmin/_processed_/4/e/csm_sn-121_Counter_Seite_M_PL_f225c4c71f.jpg" width="281" />
+              </td>
+            </tr>
+            <tr>
+              <td>Poltrona girevole per conferenza</td>
+              <td>
+                <img height="424" loading="lazy" src="https://www.sedus.com/fileadmin/_processed_/5/c/csm_sn-271_Front_M_PL_c768667606.jpg" width="300" />
+                <img height="429" loading="lazy" src="https://www.sedus.com/fileadmin/_processed_/0/9/csm_sn-271_Seite_M_PL_22e50ab4a0.jpg" width="300" />
+              </td>
+            </tr>
+            <tr>
+              <td>Modello base</td>
+              <td>• Schienale imbottito, braccioli 2-D con poggiabraccia in poliammide, sedile standard, meccanismo Similar con regolazione automatica del peso, cartuccia a gas, base in poliammide a 5 razze, colore modello nero, rotelle dure per pavimento morbido, rotelle con protezione</td>
+            </tr>
+            <tr>
+              <td>Schienale</td>
+              <td>• Ampio schienale ergonomico, adatto a tutte le corporature <br />• Schienale rivestito in membrana 3D, traspirante e permeabile all‘umidità, ingualcibile <br />• Telaio in poliammide nel colore del modello selezionato <br />• Regolazione in altezza dello schienale 70 mm (sn-122), su richiesta sostegno lombare regolabile in altezza con ulteriore regolazione in profondità (sn-121/sn-123) <br />• Su richiesta poggiatesta regolabile in altezza e girevole in similpelle, campo di regolazione 90 mm, inclinazione in avanti 25° <br />• A scelta appendigiacca singolo o in versione set per il sostegno cervicale </td>
+            </tr>
+            <tr>
+              <td>Braccioli</td>
+              <td>• Braccioli ergonomici in materiale plastico (3211) per favorire il rilassamento della muscolatura di spalle e collo, colore del supporto e dell‘asta del bracciolo: a seconda del modello, colore dei poggiabraccia: sempre nero – A scelta braccioli in poliammide regolabili in altezza (3611) <br />• A scelta 2-D braccioli di design con poggiabraccia in PUR (3294), regolabili in altezza e poggiabraccia scorrevoli <br />• A scelta braccioli 3-D con poggiabraccia in PUR (3914), regolabili in altezza e larghezza, poggiabraccia scorrevoli, regolazione in larghezza senza attrezzi dei supporti dei braccioli <br />• A scelta braccioli regolabili 4 D con poggiabraccia softtouch (3414), regolabili in altezza e larghezza, poggiabraccia scorrevoli, regolazione in larghezza senza attrezzi dei supporti dei braccioli <br />• A scelta senza braccioli, non è possibile con le seguenti configurazioni: meccanismo 1112/1116 e sedile scorrevole 4509/4512 e basamento 2415; meccanismo 1114/1115 e sedile scorrevole 4509/4512 e basamento 2215/2415; meccanismo 1113 e sedile scorrevole 4502/4513 e basamento 2215/2415 </td>
+            </tr>
+            <tr>
+              <td>Meccanismo</td>
+              <td>• Meccanismo Similar con riconoscimento automatico del peso dell‘utente e ripartizione bilanciata dei carichi in nero <br />• A scelta meccanismo Kinetic-Swing: Innovativo concetto cinematico privo di meccanismo per utilizzi non territoriali. Comfort di seduta ergonomico e intuitivo senza necessità di regolazione da parte dell’utente. <br />• A scelta meccanismo Similar con regolazione individuale del peso con angolo di apertura di 18° in nero <br />• A scelta meccanismo Similar con regolazione individuale del peso e inclinazione del sedile fino a 4° </td>
+            </tr>
+            <tr>
+              <td>Sedile</td>
+              <td>• Il sedile ergonomico e anatomico a 5 zone permette una distribuzione del carico uniforme e un comfort di seduta durevole per ogni corporatura <br />• Sedile imbottito con schiuma PUR <br />• Sedile standard: Spessore della schiuma ca. 55 mm, spessore imbottitura 55 mm <br />• Sedile comfort: Spessore della schiuma ca. 60 mm, spessore imbottitura 60 mm <br />• Su richiesta sedile scorrevole con profondità sedile 425 - 485/495 mm </td>
+            </tr>
+            <tr>
+              <td>Elevazione sedile</td>
+              <td>• Regolazione continua in altezza mediante cartuccia a gas <br />• Su richiesta Sedo-Lift III: ammortizzazione totale del peso corporeo anche nella posizione di seduta più bassa grazie al sistema pneumatico a cremagliera, pressoché inattaccabile dall‘usura, niente guasti né sostituzioni della cartuccia a gas <br />• A scelta cartuccia a gas per versione counter con anello poggiapiedi </td>
+            </tr>
+            <tr>
+              <td>Base</td>
+              <td>• Base in materiale plastico a 5 razze nero o grigio chiaro <br />• A scelta base in alluminio a 5 razze nero, lucidato o grigio chiaro <br />• Rotelle dure o morbide con diametro di 65 mm </td>
+            </tr>
+            <tr>
+              <td>Peso utilizzatore</td>
+              <td>• Consigliato per utenti con peso fino a 150 kg, per modelli con meccanismo Kinetic-Swing fino a 130 kg</td>
+            </tr>
+            <tr>
+              <td>Versione counter</td>
+              <td>• Anello poggiapiedi con superficie di appoggio da 19 mm di larghezza, regolazione in altezza 300 - 500 mm, Ø 500 mm <br />• Anello poggiapiedi e cartuccia a gas di colore nero, superficie poggiapiedi in alluminio spazzolato <br />• Altezza sedile 645 - 895 mm <br />• Rotelle autofrenanti per alzarsi in sicurezza mantenendo la piena mobilità della poltroncina, sempre con rivestimento morbido per una migliore aderenza anche in caso di pavimenti scivolosi , diametro di 65 mm <br />• Consigliato per utenti con peso fino a 110 kg </td>
+            </tr>
+            <tr>
+              <td>Norme / Certificati</td>
+              <td>• Marchio GS di TÜV Rheinland LGA Products GmbH / DIN EN 1335 / DIN 4573 <br />• Controllo ergonomicità TÜV Rheinland LGA Products GmbH <br />• GREENGUARD Certificate <br />• Sigillo di qualità AGR </td>
+            </tr>
+            <tr>
+              <td>Premi per il design</td>
+              <td>• iF DESIGN AWARD 2023, Discipline Product <br />• Red Dot Design Award 2023, Winner </td>
+            </tr>
+            <tr>
+              <td>Garanzia</td>
+              <td>• 5 anni <br />• 30 anni per Sedo-Lift </td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="download-section">
+        <div id="download-title" class="section-title">Downloads</div>
+        <div id="download-buttons-wrapper" class="download-buttons-wrapper">
+          <a href="https://www.sedus.com/download/aaed5ba09e0d4a11af5867b71fa89e9c" download class="download-button">Brochure prodotto</a>
+          <a href="https://www.sedus.com/download/9ce6ea3291474f378cdfeaa08de23cb7" download class="download-button">Rivestimenti</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div id="footer-container"></div>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="product.js"></script>
+</body>
+
+</html>

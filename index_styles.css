@@ -1,55 +1,42 @@
 /* Slider Container */
 .slider {
   position: relative;
-  overflow: hidden;
-  /* Hide overflowing slides */
+  overflow: hidden; /* Hide overflowing slides */
   width: 100%;
-  height: 45rem;
-  /* Adjust height as needed */
-  margin-bottom: 9rem;
+  height: 45rem; /* Adjust height as needed */
+  margin-bottom: 6rem;
 }
 
 /* Slides Wrapper */
 .slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  /* Smooth slide animation */
-  width: 100%;
-  /* Set to 100% * number of slides */
+  transition: transform 0.5s ease-in-out; /* Smooth slide animation */
+  width: 100%; /* Set to 100% * number of slides */
 }
 
 /* Individual Slide */
 .slide {
-  flex: 0 0 100%;
-  /* Each slide takes 100% of the viewport width */
-  position: relative;
-  /* Establish a positioning context for text */
-  overflow: hidden;
-  /* Ensure content stays within the slide boundaries */
-  height: 45rem;
-  /* Adjust height as needed */
+  flex: 0 0 100%; /* Each slide takes 100% of the viewport width */
+  position: relative; /* Establish a positioning context for text */
+  overflow: hidden; /* Ensure content stays within the slide boundaries */
+  height: 45rem; /* Adjust height as needed */
 }
 
 .slide img {
   width: 100%;
   height: 100%;
-  display: block;
-  /* Remove inline gaps between images */
+  display: block; /* Remove inline gaps between images */
   object-fit: cover
     /* Maintain aspect ratio, crop excess */
 }
 
 .slide-text {
-  position: absolute;
-  /* Position text over the image */
-  bottom: 2em;
-  /* Place text near the bottom */
+  position: absolute; /* Position text over the image */
+  bottom: 2em; /* Place text near the bottom */
   text-align: center;
   width: 100%;
-  color: #fff;
-  /* White text for contrast */
-  font-size: 5rem;
-  /* Adjust font size for visibility */
+  color: #fff; /* White text for contrast */
+  font-size: 5rem; /* Adjust font size for visibility */
   /* background-color: rgba(0, 0, 0, 0.5);  Semi-transparent background */
   text-shadow: 0 0 10px black;
 }
@@ -85,6 +72,41 @@
   right: 10px;
 }
 
+
+.n-block {
+  width: 100%;
+  height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 3rem;
+  margin: auto;
+  font-weight: 200;
+  /* column-gap: 3rem; */
+  background-image: url('/assets/tavola.webp');
+  background-size: cover; /* Cover the entire element */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  /* background-color: rgba(254, 240, 223, 0.578); */
+  /* border-radius: 0.8rem; */
+  /* padding: 0.5rem 0.5rem 0.5rem 0.5rem; */
+}
+
+.n-block img {
+  max-width: 50%;
+  flex-basis: 50%;
+}
+
+.caption {
+  text-align: left;
+  font-size: 1.5rem;
+  max-width: 25%;
+  flex-basis: 50%;
+}
+
+
+/* SELECTION MENU */
 .menu-container {
   position: relative;
   display: flex;
@@ -92,6 +114,8 @@
   align-items: center;
   flex-direction: column;
   /* gap: 0; */
+  margin-top: 18rem;
+  margin-bottom: 18rem;
 }
 
 .menu {
@@ -291,7 +315,7 @@
   text-decoration: none; /* Remove default underline */
 }
 .image-wrapper img {
-  height: 100%; /* 100% hides description */
+  height: 90%; /* 100% hides description */
 }
 /* Image description HIDDEN */
 .image-wrapper div {
@@ -365,38 +389,27 @@
 /* Partner logos */
 .partner-logos-container {
   text-align: center;
-  width: 80%;
-  /* Set width to 80% */
-  margin: 2rem auto;
-  /* Center the section horizontally */
+  width: 80%; /* Set width to 80% */
+  margin: 2rem auto; /* Center the section horizontally */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 3rem;
-  /* Space between logos */
+  column-gap: 3rem; /* Space between logos */
 }
 
 .partner-logo {
   max-width: 100%;
-  width: 6rem;
-  /* Adjust the logo size */
+  width: 6rem; /* Adjust the logo size */
 }
 
 
 @media (max-width: 768px) {
-  .slider {
-    height: auto;
-    /* Adjust height for mobile */
-  }
-
-  .slide {
-    height: auto;
-    /* Adjust height to maintain aspect ratio */
+  .slider, .slide {
+    height: auto; /* Adjust height for mobile */
   }
 
   .slide-text {
-    font-size: 2rem;
-    /* Adjust font size for visibility */
+    font-size: 2rem; /* Adjust font size for visibility */
   }
 
   .prev,
@@ -461,29 +474,23 @@
     right: -1.4rem;
   }
 
-  
+
   .partner-logo {
     max-width: 100%;
-    width: 4rem;
-    /* Adjust the logo size */
+    width: 4rem; /* Adjust the logo size */
   }
 
   .footer-links {
-    flex-direction: column;
-    /* Stack links vertically */
-    gap: 10px;
-    /* Reduce spacing */
+    flex-direction: column; /* Stack links vertically */
+    gap: 10px; /* Reduce spacing */
   }
 
   .footer-content {
-    flex-direction: column;
-    /* Stack columns vertically */
-    align-items: center;
-    /* Center-align columns */
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center; /* Center-align columns */
   }
 
   .footer-column {
-    text-align: center;
-    /* Center the text */
+    text-align: center; /* Center the text */
   }
 }
