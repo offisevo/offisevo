@@ -12,20 +12,3 @@ document.addEventListener("click", (event) => {
       navList.classList.remove("active"); // Hide the menu
   }
 });
-
-
-
-
-
-// LOAD FOOTER
-function loadFooter() {
-  fetch('/footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-container').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading footer:', error));
-}
-
-// Load the footer when the document is fully loaded
-document.addEventListener('DOMContentLoaded', loadFooter);

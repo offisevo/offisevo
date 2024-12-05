@@ -139,3 +139,18 @@ const slider = document.querySelector(".product-slider");
 slider.addEventListener("touchstart", handleTouchStart, { passive: true });
 slider.addEventListener("touchmove", handleTouchMove, { passive: true }); // Optional
 slider.addEventListener("touchend", handleTouchEnd, { passive: true });
+
+
+
+// LOAD FOOTER
+function loadFooter() {
+    fetch('/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading footer:', error));
+  }
+  
+  // Load the footer when the document is fully loaded
+  document.addEventListener('DOMContentLoaded', loadFooter);
