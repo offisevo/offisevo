@@ -5,7 +5,7 @@ const totalSlides = document.querySelectorAll(".slide").length;
 let isSliding = false; // Prevent overlapping transitions
 let autoSlideTimeout; // Timer to pause auto-slide after manual interaction
 let autoSlideInterval; // Interval for automatic sliding
-const autoSlideDelay = 3000; // Time between slides (3 seconds)
+const autoSlideDelay = 5000; // Time between slides (5 seconds)
 // Update the slider position and active indicator
 function updateSlider() {
   // Move the slides container
@@ -59,18 +59,17 @@ function stopAutoSlide() {
   autoSlideInterval = null; // Reset the interval variable
 }
 function resetAutoSlide() {
-  stopAutoSlide(); // Stop any ongoing auto-slide
   clearTimeout(autoSlideTimeout); // Clear any pending timeout
   autoSlideTimeout = setTimeout(() => {
-    startAutoSlide(); // Restart auto-slide after the delay
-  }, autoSlideDelay); // Wait 5 seconds before restarting auto-slide
+      autoSlide(); // Move to the next slide and restart auto-slide
+      startAutoSlide();
+  }, autoSlideDelay); // Wait X seconds before restarting auto-slide
 }
 // Initialize the slider and set the first dot as active
 document.addEventListener("DOMContentLoaded", () => {
   updateSlider();
   startAutoSlide(); // Start the auto-slide on page load
 });
-
 // Event listeners for manual controls
 document.querySelector(".prev").addEventListener("click", () => changeSlide(-1));
 document.querySelector(".next").addEventListener("click", () => changeSlide(1));
@@ -83,8 +82,7 @@ document.addEventListener("keydown", (event) => {
     }
 });
 // Support for swiping
-// Variables to track touch positions
-let touchStartX = 0;
+let touchStartX = 0; // Variables to track touch positions
 let touchEndX = 0;
 // Function to handle touch start event
 function handleTouchStart(event) {
@@ -107,8 +105,6 @@ const slider = document.querySelector(".slider");
 slider.addEventListener("touchstart", handleTouchStart, { passive: true });
 slider.addEventListener("touchmove", handleTouchMove, { passive: true }); // Optional
 slider.addEventListener("touchend", handleTouchEnd, { passive: true });
-
-
 
 
 
@@ -290,19 +286,3 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 });
-
-
-
-
-// LOAD FOOTER
-function loadFooter() {
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-container').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading footer:', error));
-}
-
-// Load the footer when the document is fully loaded
-document.addEventListener('DOMContentLoaded', loadFooter);

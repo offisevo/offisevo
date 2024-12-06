@@ -214,9 +214,6 @@
   
   .prod-wrapper img {
     width: 80%;
-    transition: transform 1s ease;
-    box-sizing: border-box;
-    z-index: 10;
   }
 
   .prod-wrapper img:hover {
