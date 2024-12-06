@@ -198,7 +198,7 @@
   display: inline-block;
   width: 2rem; /* Adjust the size as needed */
   height: 2rem; /* Adjust the size as needed */
-  background-image: url('/assets/pdf.svg'); /* Path to your icon */
+  background-image: url('../assets/pdf.svg'); /* Path to your icon */
   background-size: cover; /* Ensure the icon covers the element */
   margin-right: 0.6rem; /* Space between icon and text */
 }

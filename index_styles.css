@@ -244,6 +244,7 @@
 }
 
 .images-container {
+  visibility: hidden;
   display: flex;
   align-items: center;
   width: 100%;

@@ -190,19 +190,25 @@ function showPopup(popupId) {
           popup.classList.remove('hide');
           popup.classList.add('show');
           enableHorizontalScroll(popup); // Enable horizontal scrolling for popup content
-          loadImages(popup); // Load images in the popup
+          loadImages(popup).then(() => {
+              popup.querySelector('.images-container').style.visibility = 'visible';
+          });
       }, 10); // Small delay to ensure display style is set
   }
 }
+
 function enableHorizontalScroll(popup) {
   const imagesContainer = popup.querySelector('.images-container');
-  imagesContainer.addEventListener('wheel', function(event) {
-      if (event.deltaY !== 0) {
-          imagesContainer.scrollLeft += event.deltaY; // Translate vertical scroll to horizontal scroll
-          event.preventDefault(); // Prevent default vertical scroll behavior
-      }
-  }, { passive: false });
+  if (imagesContainer) {
+      imagesContainer.addEventListener('wheel', function(event) {
+          if (event.deltaY !== 0) {
+              imagesContainer.scrollLeft += event.deltaY; // Translate vertical scroll to horizontal scroll
+              event.preventDefault(); // Prevent default vertical scroll behavior
+          }
+      }, { passive: false });
+  }
 }
+
 function enableVerticalScroll() {
   document.body.style.overflow = ''; // Enable background scrolling by resetting the overflow property
   document.body.style.paddingRight = ''; // Remove the padding compensation
@@ -212,30 +218,44 @@ function enableVerticalScroll() {
       container.parentNode.replaceChild(newContainer, container);
   });
 }
+
 function loadImages(popup) { // Function for lazy loading images
-  const images = popup.querySelectorAll('img[data-src]');
-  images.forEach(img => {
-      img.src = img.getAttribute('data-src');
-      img.removeAttribute('data-src'); // Remove data-src attribute after loading
+  return new Promise((resolve) => {
+      const images = popup.querySelectorAll('img[data-src]');
+      let loadedCount = 0;
+
+      const onLoad = () => {
+          loadedCount += 1;
+          if (loadedCount === images.length) {
+              resolve(); // Resolve the promise when all images are loaded
+          }
+      };
+
+      images.forEach(img => {
+          img.addEventListener('load', onLoad);
+          img.src = img.getAttribute('data-src');
+          img.removeAttribute('data-src'); // Remove data-src attribute after loading
+      });
   });
 }
+
 document.addEventListener("DOMContentLoaded", function() {
   const closePopupButtons = document.querySelectorAll(".close-popup-button");
   const overlay = document.getElementById('popup-overlay');
   const leftArrows = document.querySelectorAll('.left-scroll-arrow-button');
   const rightArrows = document.querySelectorAll('.right-scroll-arrow-button');
-  // Function to close popup
+
   function closePopup(popup) {
-    if (popup) {
-        popup.classList.remove('show');
-        popup.classList.add('hide');
-        overlay.classList.remove('show');
-        overlay.classList.add('hide');
-        setTimeout(() => {
-            overlay.style.display = "none"; // Hide the overlay
-            enableVerticalScroll(); // Enable vertical scroll after closing the popup
-        }, 500); // Match the closing transition duration
-    }
+      if (popup) {
+          popup.classList.remove('show');
+          popup.classList.add('hide');
+          overlay.classList.remove('show');
+          overlay.classList.add('hide');
+          setTimeout(() => {
+              overlay.style.display = "none"; // Hide the overlay
+              enableVerticalScroll(); // Enable vertical scroll after closing the popup
+          }, 500); // Match the closing transition duration
+      }
   }
 
   // Function to close popup when clicking the close button
@@ -253,6 +273,7 @@ document.addEventListener("DOMContentLoaded", function() {
           closePopup(popup);
       }
   });
+
   // Handle left arrow click
   leftArrows.forEach(arrow => {
       arrow.addEventListener('click', () => {
@@ -260,6 +281,7 @@ document.addEventListener("DOMContentLoaded", function() {
           imagesContainer.scrollBy({ left: -1450, behavior: 'smooth' }); // Adjust scroll distance as needed
       });
   });
+
   // Handle right arrow click
   rightArrows.forEach(arrow => {
       arrow.addEventListener('click', () => {
@@ -268,6 +290,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 });
+
 
 
 
