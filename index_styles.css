@@ -41,6 +41,19 @@
   text-shadow: 0 0 10px black;
 }
 
+/* Buttons */
+.slide-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
 /* Indicators (Dots) */
 .indicators {
   position: absolute;
@@ -362,7 +375,7 @@
 
 .close-popup-button {
   position: absolute;
-  top: -1rem;
+  top: -7.2rem;
   right: -5.4rem;
   font-size: 6rem;
   color: #fff;
@@ -373,7 +386,7 @@
   transform: none;
   background: none;
   padding: 0;
-  line-height: 0; /* Makes it unselectable, which is better looking */
+  border: none;
 }
 
 .scroll-arrow-button {
@@ -385,6 +398,10 @@
   cursor: pointer;
   z-index: 1002; /* Ensure it stays above other content within the popup */
   background: none;
+  transform: translateY(-50%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
 }
 .left-scroll-arrow-button {
   left: -7rem;
@@ -411,7 +428,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .slider, .slide {
     height: auto; /* Adjust height for mobile */
   }
@@ -481,7 +498,7 @@
   /* Popup styles */
   .popup {
     width: 90%;
-    height: 22vh;
+    height: 25vh;
     top: 36%;
   }
   .image-wrapper img {
@@ -491,7 +508,6 @@
     display: none;
   }
   .close-popup-button {
-    top: -3rem;
     right: -1.4rem;
   }
 
@@ -499,5 +515,34 @@
   .partner-logo {
     max-width: 100%;
     width: 4rem; /* Adjust the logo size */
+  }
+}
+
+
+@media (max-width: 1130px) and (min-width: 480px) {
+  .menu.level-1.shrink {
+    opacity: 0.5;
+    transform: scale(0.65) translate(0, -14.5rem);
+    gap: 0.9rem;
+  }
+  .menu.level-2.shrink {
+    opacity: 0.5;
+    transform: scale(0.55) translate(0, 28rem);
+    gap: 0.9rem;
+    flex-wrap: nowrap;
+    max-width: 80vh;
+  }
+
+  .popup {
+    width: 90%;
+    height: 40vh;
+    top: 30%;
+  }
+  .close-popup-button {
+    right: -1.4rem;
+  }
+
+  .scroll-arrow-button {
+    display: none;
   }
 }

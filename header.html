@@ -1,30 +1,54 @@
 <div class="header-content">
   <div class="logo-container">
-    <a href="#"><img src="assets/logo.svg" alt="OffiSevo" class="logo"></a>
+    <a href="index.html"><img src="assets/logo.svg" alt="OffiSevo" class="logo"></a>
     <!-- <h1 class="site-title">Azienda</h1> -->
   </div>
 
-  <nav class="nav">
+  <nav class="desktop-nav">
     <ul class="nav-list">
         <li>
             <a href="#">Prodotti</a>
             <div class="dropdown-wrapper">
               <div class="dropdown-content">
                 <div class="dropdown-block">
-                    <div class="dropdown-heading">SEDUTE</div>
-                    <div class="dropdown-li">Operative</div>
-                    <div class="dropdown-li">Direzionali</div>
-                    <div class="dropdown-li">Conferenze</div>
-                    <div class="dropdown-li">Lounge</div>
-                    <div class="dropdown-li">Reception</div>
-                    <div class="dropdown-li">Sgabelli</div>
-                    <div class="dropdown-li">Divani e Poltrone</div>
+                  <div class="dropdown-heading">SEDUTE</div>
+                  <div class="dropdown-items">
+                    <a class="dropdown-li">Operative</a>
+                    <a class="dropdown-li">Direzionali</a>
+                    <a class="dropdown-li">Conferenze</a>
+                    <a class="dropdown-li">Lounge</a>
+                    <a class="dropdown-li">Reception</a>
+                    <a class="dropdown-li">Sgabelli</a>
+                    <a class="dropdown-li">Divani e Poltrone</a>
+                  </div>
+                </div>
+                <div class="dropdown-block">
+                  <div class="dropdown-heading">ARREDI</div>
+                  <div class="dropdown-items">
+                    <a class="dropdown-li">Tavoli</a>
+                    <a class="dropdown-li">Illuminazione</a>
+                    <a class="dropdown-li">Fonoassorbenza</a>
+                    <a class="dropdown-li">Verde</a>
+                    <a class="dropdown-li">Contenitori</a>
+                    <a class="dropdown-li">Tappeti</a>
+                    <a class="dropdown-li">Scaffalatura</a>
+                  </div>
+                </div>
+                <div class="dropdown-block">
+                  <div class="dropdown-heading">RIUNIONI</div>
+                  <div class="dropdown-items">
+                    <a class="dropdown-li">Divani</a>
+                    <a class="dropdown-li">Vetrate</a>
+                    <a class="dropdown-li">Tavoli e riunioni</a>
+                    <a class="dropdown-li">Meeting box</a>
+                  </div>
                 </div>
               </div>
             </div>
         </li>
+
         <li>
-          <a href="#">asdfsadfsaf</a>
+          <a href="#">About</a>
           <div class="dropdown-wrapper">
             <div class="dropdown-content">
               <a href="#">Sub-item 4</a>
@@ -34,7 +58,7 @@
           </div>
         </li>
         <li>
-          <a href="#">qqqqqqq</a>
+          <a href="#">More</a>
           <div class="dropdown-wrapper">
             <div class="dropdown-content">
               <a href="#">Sub-item d</a>
@@ -43,18 +67,210 @@
             </div>
           </div>
         </li>
-        <li>
-          <a href="#">qqqqqqq</a>
-          <div class="dropdown-wrapper">
-            <div class="dropdown-content">
-              <a href="#">Sub-item b</a>
-              <a href="#">Sub-item n</a>
-              <a href="#">Sub-item mm</a>
-            </div>
-          </div>
-        </li>
     </ul>
   </nav>
 
-  <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+
+
+
+  <div class="hamburger" id="hamburger"></div>
+  <!-- Navigation Menu -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <!-- Main menu -->
+    <ul id="nav-menu" class="nav-menu">
+      <li class="nav-menu-item" data-target="nav-submenu1">Prodotti</li>
+      <li class="nav-menu-item" data-target="nav-submenu2">About</li>
+      <li class="nav-menu-item" data-target="nav-submenu3">More</li>
+    </ul>
+
+    <!-- Submenu Level 1 -->
+    <ul id="nav-submenu1" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-menu">Prodotti</button>
+      <li class="nav-menu-item" data-target="nav-submenu1-1">Sedute</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-2">Arredi</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-3">Riunioni</li>
+    </ul>
+    <ul id="nav-submenu2" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-menu">Go Back</button>
+      <li class="nav-menu-item">Sub Item 1</li>
+      <li class="nav-menu-item">Sub Item 2</li>
+      <li class="nav-menu-item">Sub Item 3</li>
+    </ul>
+    <ul id="nav-submenu3" class="nav-submenu" data-parent="nav-menu">
+      <button class="nav-back-button">Go Back</button>
+      <li class="nav-menu-item">Sub Item X</li>
+      <li class="nav-menu-item">Sub Item Y</li>
+      <li class="nav-menu-item">Sub Item Z</li>
+    </ul>
+
+    <!-- Submenu Level 2 -->
+    <ul id="nav-submenu1-1" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1">Sedute</button>
+      <li class="nav-menu-item" data-target="nav-submenu1-1-1">Operative</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-1-2">Direzionali</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-1-3">Conferenze</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-1-4">Lounge</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-1-5">Reception</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-1-6">Sgabelli</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-1-7">Divani e poltrone</li>
+    </ul>
+    <ul id="nav-submenu1-2" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1">Arredi</button>
+      <li class="nav-menu-item" data-target="nav-submenu1-2-1">Tavoli</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-2-2">Isolamento acustico</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-2-3">Verde ufficio</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-2-4">Illuminazione</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-2-5">Contenitori</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-2-6">Tappeti</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-2-7">Scaffali</li>
+    </ul>
+
+    <!-- Submenu Level 3: Sedute -->
+    <ul id="nav-submenu1-1-1" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1-1">Operative</button>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/operative/sekit.html';">se:kit</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/operative/quarterback.html';">quarterback</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/operative/seflex.html';">se:flex</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/operative/mr24.html';">mr:24</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/operative/seair.html';">se:air</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/operative/semotionnet.html';">se:motion net</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/operative/blackdotair.html';">black dot air</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/operative/blackdotid.html';">black dot +id</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/operative/crossline.html';">crossline</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/operative/openmind.html';">open mind</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/operative/netwin.html';">netwin</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/operative/earlybird.html';">early bird</li>
+    </ul>
+    <ul id="nav-submenu1-1-2" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1-1">Direzionali</button>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/direzionali/openupmodern.html';">open up modern</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/direzionali/openup.html';">open up</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/direzionali/openmind.html';">open mind</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/direzionali/crossline.html';">crossline</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/direzionali/seline.html';">se:line</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/direzionali/blackdotid.html';">black dot +id</li>
+    </ul>
+    <ul id="nav-submenu1-1-3" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1-1">Conferenze</button>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/conferenze/sespot.html';">se:spot</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/conferenze/semood.html';">se:mood</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/conferenze/sekit1.html';">se:kit 1</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/conferenze/sekit2.html';">se:kit 2</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/conferenze/seflex1.html';">se:flex 1</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/conferenze/seflex2.html';">se:flex 2</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/conferenze/quarterback.html';">quarterback</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/conferenze/netwin.html';">netwin</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/conferenze/meetchair1.html';">meet chair 1</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/conferenze/meetchair2.html';">meet chair 2</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/conferenze/meetchair3.html';">meet chair 3</li>
+    </ul>
+    <ul id="nav-submenu1-1-4" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1-1">Lounge</button>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/lounge/selounge.html';">se:lounge</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/lounge/selounge2.html';">se:lounge 2</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/lounge/seloungelight.html';">se:lounge light</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/lounge/onspotcosy.html';">on spot cosy</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/lounge/sweetspot.html';">sweetspot</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/lounge/selivingpoltrona.html';">se:living (poltrona)</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/lounge/sedot.html';">se:dot</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/lounge/seworksnake.html';">se:work (snake)</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/lounge/seworksofa.html';">se:work (sofa)</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/lounge/sework.html';">se:work</li>
+    </ul>
+    <ul id="nav-submenu1-1-5" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1-1">Reception</button>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/reception/netwin.html';">netwin</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/reception/semeet.html';">se:meet</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/reception/flipflap.html';">flip flap</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/reception/quarterback.html';">quarterback</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/reception/sedo.html';">se:do</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/reception/semood.html';">se:mood</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/reception/seflex.html';">se:flex</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/reception/sespot.html';">se:spot</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/reception/onspotcosy.html';">on spot cosy</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/reception/onspot.html';">on spot</li>
+    </ul>
+    <ul id="nav-submenu1-1-6" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1-1">Sgabelli</button>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/sgabelli/sespotstool1.html';">se:spot stool 1</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/sgabelli/sespotstool2.html';">se:spot stool 2</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/sgabelli/sefit.html';">se:fit</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/sgabelli/selabhopper.html';">se:lab hopper</li>
+    </ul>
+    <ul id="nav-submenu1-1-7" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1-1">Divani e poltrone</button>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/divani_poltrone/selivingpoltrona.html';">se:living (poltrona)</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/divani_poltrone/selivingsofa.html';">se:living (sofa)</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/divani_poltrone/seworks1.html';">se:works 1</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/divani_poltrone/seworks2.html';">se:works 2</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/divani_poltrone/seworks3.html';">se:works 3</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/divani_poltrone/sopha1.html';">sopha 1</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/divani_poltrone/sopha2.html';">sopha 2</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/sedute/divani_poltrone/sopha3.html';">sopha 3</li>
+    </ul>
+
+    <!-- Submenu Level 3: Arredi -->
+    <ul id="nav-submenu1-2-1" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1-2">Tavoli</button>
+      <li class="nav-menu-item" data-target="nav-submenu1-2-1-1">Singoli</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-2-1-2">Team</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-2-1-3">Riunioni, Seminari, Conferenze</li>
+      <li class="nav-menu-item" data-target="nav-submenu1-2-1-4">Bistrò, mense, tavoli lounge e tavolini</li>
+    </ul>
+
+    <!-- Submenu Level 4: Tavoli -->
+    <ul id="nav-submenu1-2-1-1" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1-2-1">Singoli</button>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/singoli/sedeskhome.html';">se:desk home</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/singoli/selabworkdesk.html';">se:lab work desk</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/singoli/selabe-desk.html';">se:lab e-desk</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/singoli/selabe-deska.html';">se:lab e-desk A</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/singoli/temptationspeed.html';">temptation speed</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/singoli/temptationc.html';">temptation c</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/singoli/temptationfour.html';">temptation four</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/singoli/temptationprime.html';">temptation prime</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/singoli/gettogetherwood.html';">get together wood</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/singoli/selabflip.html';">se:lab flip</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/singoli/selabtableboard.html';">se:lab tableboard</li>
+    </ul>
+    <ul id="nav-submenu1-2-1-2" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1-2-1">Team</button>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/team/selabtwin.html';">se:lab twin</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/team/selabbench.html';">se:lab bench</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/team/invitation.html';">invitation</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/team/temptationfour.html';">temptation four</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/team/temptationprime.html';">temptation prime</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/team/temptationsmarttwin.html';">temptation smart twin</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/team/gettogether.html';">get together</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/team/selabmeetandstand.html';">se:lab meet & stand</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/team/mastermindhighdesk.html';">mastermind high desk</li>
+    </ul>
+    <ul id="nav-submenu1-2-1-3" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1-2-1">Riunioni, Seminari, Conferenze</button>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/riu_semi_conf/temptationhighdesk.html';">temptation high desk</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/riu_semi_conf/temptationhighdesk2.html';">temptation high desk 2</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/riu_semi_conf/temptationprime.html';">temptation prime</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/riu_semi_conf/temptationfour.html';">temptation four</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/riu_semi_conf/temptationc.html';">temptation c</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/riu_semi_conf/invitation.html';">invitation</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/riu_semi_conf/mastermindhighdesk.html';">mastermind high desk</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/riu_semi_conf/mastermindfold.html';">mastermind fold</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/riu_semi_conf/selabtableboard.html';">se:lab tableboard</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/riu_semi_conf/sematrix.html';">se:matrix</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/riu_semi_conf/selabmeetdesk.html';">se:lab meet desk</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/riu_semi_conf/selabflip.html';">se:lab flip</li>
+    </ul>
+    <ul id="nav-submenu1-2-1-4" class="nav-submenu">
+      <button class="nav-back-button" data-parent="nav-submenu1-2-1">Bistrò, mense, tavoli lounge e tavolini</button>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/bistro_lounge/meettables.html';">meet tables</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/bistro_lounge/meettables1.html';">meet tables 1</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/bistro_lounge/seassist.html';">se:assist</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/bistro_lounge/sweetspottable.html';">sweetspot table</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/bistro_lounge/sophatable.html';">sopha table</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/bistro_lounge/seworkstable.html';">se:works table</li>
+      <li class="nav-menu-item isFinalLevel" onclick="location.href='/prodotti/arredi/tavoli/bistro_lounge/setea.html';">se:tea</li>
+    </ul>
+
+  </nav>
+
 </div>

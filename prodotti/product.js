@@ -1,4 +1,14 @@
 // PRODUCT SLIDER, NOT STARTING SLIDING ON PAGE LOAD
+let currentSlide = 0; // Track the active slide index
+const slides = document.querySelector(".product-slides");
+const totalSlides = document.querySelectorAll(".product-slide").length;
+let isSliding = false; // Prevent overlapping transitions
+let autoSlideTimeout; // Timer to pause auto-slide after manual interaction
+let autoSlideInterval; // Interval for automatic sliding
+const autoSlideDelay = 4000; // Time between slides (4 seconds)
+window.addEventListener('scroll', checkScroll); // Call the checkScroll function on scroll
+checkScroll(); // Initial check in case the element is already in view
+
 function isElementInViewport(el) { // Function to check if the element is in view
     const rect = el.getBoundingClientRect();
     return (
@@ -15,15 +25,7 @@ function checkScroll() { // Function to handle the scroll event
         window.removeEventListener('scroll', checkScroll); // Stop checking after starting
     }
 }
-window.addEventListener('scroll', checkScroll); // Call the checkScroll function on scroll
-checkScroll(); // Initial check in case the element is already in view
-let currentSlide = 0; // Track the active slide index
-const slides = document.querySelector(".product-slides");
-const totalSlides = document.querySelectorAll(".product-slide").length;
-let isSliding = false; // Prevent overlapping transitions
-let autoSlideTimeout; // Timer to pause auto-slide after manual interaction
-let autoSlideInterval; // Interval for automatic sliding
-const autoSlideDelay = 4000; // Time between slides (4 seconds)
+
 function updateSlider() { // Update the slider position and active indicator
     // Move the slides container
     const offset = currentSlide * -100; // Calculate offset percentage

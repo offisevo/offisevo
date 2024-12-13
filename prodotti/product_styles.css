@@ -203,7 +203,7 @@
   margin-right: 0.6rem; /* Space between icon and text */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1130px) {
   .banner {
     margin-bottom: 3rem;
   }

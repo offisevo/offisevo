@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
     <meta charset="UTF-8">
@@ -13,53 +13,50 @@
 
 <body>
     <header>
-        <header class="header">
-          <div id="header-container"></div>
-        </header>
-        
-        <div class="slider">
-            <div class="slides">
-                <div class="slide">
-                    <img src="assets/slide/Ambiente_06_Gen-2048x1088.jpg">
-                    <div class="slide-text">SPACES THAT EVOLVE</div>
-                </div>
-                <div class="slide">
-                    <img src="assets/slide/HHH.webp">
-                    <div class="slide-text">SPACES THAT EVOLVE</div>
-                </div>
-                <div class="slide">
-                    <img src="assets/slide/cadorago_9993_1920xx.jpg">
-                    <div class="slide-text">SPACES THAT EVOLVE</div>
-                </div>
-                <div class="slide">
-                    <img src="assets/slide/composizione-1var-1-scaled-1.jpg">
-                    <div class="slide-text">SPACES THAT EVOLVE</div>
-                </div>
-                <div class="slide">
-                    <img src="assets/slide/Italia_gallery-4-1.webp">
-                    <div class="slide-text">SPACES THAT EVOLVE</div>
-                </div>
-                <div class="slide">
-                    <img src="assets/slide/HHHHH.webp">
-                    <div class="slide-text">SPACES THAT EVOLVE</div>
-                </div>
-            </div>
-            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-            <button class="next" onclick="changeSlide(1)">&#10095;</button>
-            <!-- Indicators -->
-            <div class="indicators">
-                <span class="dot" onclick="goToSlide(0)"></span>
-                <span class="dot" onclick="goToSlide(1)"></span>
-                <span class="dot" onclick="goToSlide(2)"></span>
-                <span class="dot" onclick="goToSlide(3)"></span>
-                <span class="dot" onclick="goToSlide(4)"></span>
-                <span class="dot" onclick="goToSlide(5)"></span>
-            </div>
-        </div>
+      <div id="header-container"></div>
     </header>
 
-
     <main>
+        <div class="slider">
+          <div class="slides">
+              <div class="slide">
+                  <img src="assets/slide/Ambiente_06_Gen-2048x1088.jpg">
+                  <div class="slide-text">SPACES THAT EVOLVE</div>
+              </div>
+              <div class="slide">
+                  <img src="assets/slide/HHH.webp">
+                  <div class="slide-text">SPACES THAT EVOLVE</div>
+              </div>
+              <div class="slide">
+                  <img src="assets/slide/cadorago_9993_1920xx.jpg">
+                  <div class="slide-text">SPACES THAT EVOLVE</div>
+              </div>
+              <div class="slide">
+                  <img src="assets/slide/composizione-1var-1-scaled-1.jpg">
+                  <div class="slide-text">SPACES THAT EVOLVE</div>
+              </div>
+              <div class="slide">
+                  <img src="assets/slide/Italia_gallery-4-1.webp">
+                  <div class="slide-text">SPACES THAT EVOLVE</div>
+              </div>
+              <div class="slide">
+                  <img src="assets/slide/HHHHH.webp">
+                  <div class="slide-text">SPACES THAT EVOLVE</div>
+              </div>
+          </div>
+          <button class="slide-buttons prev" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="slide-buttons next" onclick="changeSlide(1)">&#10095;</button>
+          <!-- Indicators -->
+          <div class="indicators">
+              <span class="dot" onclick="goToSlide(0)"></span>
+              <span class="dot" onclick="goToSlide(1)"></span>
+              <span class="dot" onclick="goToSlide(2)"></span>
+              <span class="dot" onclick="goToSlide(3)"></span>
+              <span class="dot" onclick="goToSlide(4)"></span>
+              <span class="dot" onclick="goToSlide(5)"></span>
+          </div>
+      </div>
+
       <section id="intestazione" class="intestazione">
         <h1>Soluzioni innovative, confortevoli e durature per spazi di lavoro che si evolvono con te</h1>
       </section>
@@ -89,20 +86,20 @@
         </div>
 
         <div id="menu-3" class="menu level-2" alt="Arredi">
-          <div class="menu-button" onclick="showMenu(5, this, 2)" data-text="Tavoli"><img src="assets/prodottidummy" /></div>
-          <div class="menu-button" onclick="showMenu(6, this, 2)" data-text="Fonoassorbenza"><img src="assets/prodottidummy" /></div>
-          <div class="menu-button" onclick="showMenu(7, this, 2)" data-text="Verde"><img src="assets/prodottidummy" /></div>
-          <div class="menu-button" onclick="showMenu(8, this, 2)" data-text="Illuminazione"><img src="assets/prodottidummy" /></div>
-          <div class="menu-button" onclick="showMenu(9, this, 2)" data-text="Contenitori"><img src="assets/prodottidummy" /></div>
-          <div class="menu-button" onclick="showMenu(10, this, 2)" data-text="Tappeti"><img src="assets/prodottidummy" /></div>
-          <div class="menu-button" onclick="showMenu(11, this, 2)" data-text="Scaffalatura"><img src="assets/prodottidummy" /></div>
+          <div class="menu-button" onclick="showMenu(5, this, 2)" data-text=""><img src="assets/prodotti/arredi/tavoli.svg" /></div>
+          <div class="menu-button" onclick="showMenu(6, this, 2)" data-text=""><img src="assets/prodotti/arredi/fonoassorbenza.svg" /></div>
+          <div class="menu-button" onclick="showMenu(7, this, 2)" data-text=""><img src="assets/prodotti/arredi/verde.svg" /></div>
+          <div class="menu-button" onclick="showMenu(8, this, 2)" data-text=""><img src="assets/prodotti/arredi/illuminazione.svg" /></div>
+          <div class="menu-button" onclick="showMenu(9, this, 2)" data-text=""><img src="assets/prodotti/arredi/contenitori.svg" /></div>
+          <div class="menu-button" onclick="showMenu(10, this, 2)" data-text=""><img src="assets/prodotti/arredi/tappeti.svg" /></div>
+          <div class="menu-button" onclick="showMenu(11, this, 2)" data-text=""><img src="assets/prodotti/arredi/scaffali.svg" /></div>
         </div>
 
         <div id="menu-4" class="menu level-2" alt="Riunioni">
-          <div class="menu-button" onclick="showMenu(12, this, 2)" data-text="Divani"><img src="assets/prodottidummy" /></div>
-          <div class="menu-button" onclick="showMenu(13, this, 2)" data-text="Vetrate"><img src="assets/prodottidummy" /></div>
-          <div class="menu-button" onclick="showMenu(14, this, 2)" data-text="Tavoli riunioni"><img src="assets/prodottidummy" /></div>
-          <div class="menu-button" onclick="showMenu(15, this, 2)" data-text="Meeting box"><img src="assets/prodottidummy" /></div>
+          <div class="menu-button" onclick="showMenu(12, this, 2)" data-text=""><img src="assets/prodotti/riunioni/divani.svg" /></div>
+          <div class="menu-button" onclick="showMenu(13, this, 2)" data-text=""><img src="assets/prodotti/riunioni/vetrate.svg" /></div>
+          <div class="menu-button" onclick="showMenu(14, this, 2)" data-text=""><img src="assets/prodotti/riunioni/tavoli_riunione.svg" /></div>
+          <div class="menu-button" onclick="showMenu(15, this, 2)" data-text=""><img src="assets/prodotti/riunioni/meeting_box.svg" /></div>
         </div>
 
         <!-- Level 3 menus -->
